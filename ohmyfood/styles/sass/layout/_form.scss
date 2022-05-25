@@ -1,0 +1,17 @@
+.section_location{
+    display: flex;
+    justify-content: center;
+    background-color: $color-4;
+    padding: 20px 0 20px 0;
+}
+
+.searchInput{
+    background-color: $color-4;
+    border: none;
+    font-size: 20px;
+}
+
+.fa-location-dot{
+    margin-right: 20px;
+    font-size: 20px;
+}
