@@ -1,5 +1,56 @@
-h1 {
-  color: rgb(183, 168, 38);
+.box {
+  box-sizing: border-box;
+  /* Opera/IE 8+ */
+  -moz-box-sizing: border-box;
+  /* Firefox, autres Gecko */
+  -webkit-box-sizing: border-box;
+  /* Safari/Chrome, autres WebKit */
+}
+
+body {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  margin: 0;
+  scroll-behavior: smooth;
+}
+
+h2 {
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+}
+
+.section_location {
+  display: flex;
+  justify-content: center;
+  background-color: #efefef;
+  padding: 20px 0 20px 0;
+}
+
+.searchInput {
+  background-color: #efefef;
+  border: none;
+  font-size: 20px;
+}
+
+.fa-location-dot {
+  margin-right: 20px;
+  font-size: 20px;
+}
+
+.header {
+  text-align: center;
+  padding: 1rem;
+  box-shadow: 0 0 0 3px rgba(129, 128, 128, 0.262745098);
+  position: relative;
+}
+
+.logo img {
+  width: 250px;
+  height: 45px;
 }
 
 /*# sourceMappingURL=styles.css.map */
