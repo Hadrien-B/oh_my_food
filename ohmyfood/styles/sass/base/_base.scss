@@ -1,3 +1,12 @@
-h1{
-    color: rgb(183, 168, 38);
+.box {
+    box-sizing: border-box;
+    /* Opera/IE 8+ */
+    -moz-box-sizing: border-box;
+    /* Firefox, autres Gecko */
+    -webkit-box-sizing: border-box;
+    /* Safari/Chrome, autres WebKit */
+}
+
+body {
+    box-sizing: border-box;
 }
