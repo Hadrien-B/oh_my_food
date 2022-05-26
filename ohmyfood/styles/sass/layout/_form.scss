@@ -1,17 +1,37 @@
-.section_location{
+.location{
     display: flex;
     justify-content: center;
     background-color: $color-4;
-    padding: 20px 0 20px 0;
+    padding: 15px 0 15px 0;
+    &__searchInput{
+        background-color: $color-4;
+        border: none;
+        font-size: 18px;
+    }
 }
 
-.searchInput{
-    background-color: $color-4;
+
+
+input{
     border: none;
-    font-size: 20px;
+    outline: none;
 }
 
 .fa-location-dot{
-    margin-right: 20px;
-    font-size: 20px;
+    margin-right: 10px;
+    margin-left: 50px;
+    font-size: 18px;
+}
+
+::placeholder{
+    color: black;
+    font-weight: 400;
+}
+
+.description{
+    text-align: center;
+    padding: 32px;
+    &__details{
+        font-weight: 200;
+    }
 }
