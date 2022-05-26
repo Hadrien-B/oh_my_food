@@ -1,3 +1,5 @@
+/*/////Locaslisation///////*/
+
 .location{
     display: flex;
     justify-content: center;
@@ -10,28 +12,73 @@
     }
 }
 
-
-
-input{
-    border: none;
-    outline: none;
-}
-
 .fa-location-dot{
     margin-right: 10px;
     margin-left: 50px;
     font-size: 18px;
 }
 
-::placeholder{
-    color: black;
-    font-weight: 400;
+input{
+    border: none;
+    outline: none;
+    &::placeholder{
+        color: black;
+        font-weight: 400;
+    }
 }
 
+
+
+
+
+/*//////Description/////*/
+
 .description{
+    background-color: $color-5;
     text-align: center;
-    padding: 32px;
+    padding: 20px 0 50px 0;
     &__details{
         font-weight: 200;
+        padding: 1px 0 30px 0;
+    }
+}
+
+/*//////Fonctionnement//////*/
+
+.container{
+    margin-bottom: 150px;
+}
+
+.process__list{
+    background-color: $color-5;
+    padding: 30px 20px;
+    @include button-shadow;
+    border-radius: 18px;
+    margin: 25px 25px;
+    &:hover{
+    @include button-shadow-hover;
+    background-color: $color-7;
+    }
+}
+
+ol {
+    counter-reset: liste;
+}
+
+li{
+    counter-increment: liste;
+    &::before{
+        content: counter(liste);
+        color: $color-6;
+        background-color: $color-primary;
+        height: 30px;
+        width: 30px;
+        border: none;
+        position: absolute;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        left: 50px;
     }
 }
