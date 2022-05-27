@@ -1,6 +1,7 @@
 /*///////Restaurants///////*/
 .container_restaurant{
     background-color: $color-5;
+    padding: 40px 0 40px 0;
 }
 
 .restaurant{
@@ -19,8 +20,46 @@
 }
 
 .restaurant__card > img{
+    display: flex;
     object-fit: cover;
+    object-position: 50% 70%;
     width: 100%;
     height: 180px;
     border-radius: 15px 15px 0 0;
+}
+
+.badge_new{
+    background-color: $color-tertiary;
+    color: $color-8;
+    padding: 8px;
+    border-radius: 2px;
+    font-weight: 400;
+    position: absolute;
+}
+
+.details__restaurant{
+    display: flex;
+    align-items: center;
+    padding: 12px;
+
+}
+
+.fa-heart{
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    &:hover{
+        background: linear-gradient(to bottom right, $color-secondary, $color-primary);
+    }
+}
+
+
+.name__restaurant{
+    flex: 1;
+}
+
+.name__restaurant > h3,p{
+    margin: 3px 0 0 0;
 }
