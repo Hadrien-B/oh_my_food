@@ -13,6 +13,7 @@ body {
 
 ul {
   list-style-type: none;
+  padding-left: 0;
 }
 
 body {
@@ -44,6 +45,35 @@ h2 {
   transition-duration: 0.25s;
   box-shadow: 0 20px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
   cursor: pointer;
+}
+
+/*///////Restaurants///////*/
+.container_restaurant {
+  background-color: #f7f5f5;
+}
+
+.restaurant {
+  display: flex;
+  flex-wrap: wrap;
+}
+.restaurant .restaurant__card {
+  flex: 1 1 350px;
+  margin: 15px 15px;
+  background-color: #fff;
+  border-radius: 15px;
+  box-shadow: 2px 3px rgba(171, 167, 167, 0.12), 0 10px 20px rgba(0, 0, 0, 0.24);
+}
+.restaurant .restaurant__card:hover {
+  transition-duration: 0.25s;
+  box-shadow: 0 20px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+  cursor: pointer;
+}
+
+.restaurant__card > img {
+  object-fit: cover;
+  width: 100%;
+  height: 180px;
+  border-radius: 15px 15px 0 0;
 }
 
 /*/////Locaslisation///////*/
@@ -78,7 +108,7 @@ input::placeholder {
 .description {
   background-color: #f7f5f5;
   text-align: center;
-  padding: 20px 0 50px 0;
+  padding: 20px 8px 50px 8px;
 }
 .description__details {
   font-weight: 200;
@@ -88,6 +118,7 @@ input::placeholder {
 /*//////Fonctionnement//////*/
 .container {
   margin-bottom: 150px;
+  margin-top: 50px;
 }
 
 .process__list {
@@ -95,7 +126,7 @@ input::placeholder {
   padding: 30px 20px;
   box-shadow: 2px 3px rgba(171, 167, 167, 0.12), 0 10px 20px rgba(0, 0, 0, 0.24);
   border-radius: 18px;
-  margin: 25px 25px;
+  margin: 25px 25px 25px 40px;
 }
 .process__list:hover {
   transition-duration: 0.25s;
@@ -108,10 +139,10 @@ ol {
   counter-reset: liste;
 }
 
-li {
+.process > li {
   counter-increment: liste;
 }
-li::before {
+.process > li::before {
   content: counter(liste);
   color: #fff;
   background-color: #9356dc;
@@ -123,7 +154,17 @@ li::before {
   align-items: center;
   justify-content: center;
   border-radius: 50%;
-  left: 50px;
+  left: 20px;
+}
+
+.fa-list-ul, .fa-solid {
+  padding: 0 14px;
+  color: grey;
+  font-size: 18px;
+}
+
+.choice {
+  font-weight: 400;
 }
 
 .header {
