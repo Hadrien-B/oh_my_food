@@ -36,7 +36,7 @@ input{
 .description{
     background-color: $color-5;
     text-align: center;
-    padding: 20px 0 50px 0;
+    padding: 20px 8px 50px 8px;
     &__details{
         font-weight: 200;
         padding: 1px 0 30px 0;
@@ -47,6 +47,7 @@ input{
 
 .container{
     margin-bottom: 150px;
+    margin-top: 50px;
 }
 
 .process__list{
@@ -54,7 +55,7 @@ input{
     padding: 30px 20px;
     @include button-shadow;
     border-radius: 18px;
-    margin: 25px 25px;
+    margin: 25px 25px 25px 40px;
     &:hover{
     @include button-shadow-hover;
     background-color: $color-7;
@@ -65,7 +66,7 @@ ol {
     counter-reset: liste;
 }
 
-li{
+.process > li{
     counter-increment: liste;
     &::before{
         content: counter(liste);
@@ -79,6 +80,17 @@ li{
         align-items: center;
         justify-content: center;
         border-radius: 50%;
-        left: 50px;
+        left: 20px;
     }
+}
+
+.fa-list-ul, .fa-solid{
+    padding: 0 14px;
+    color: grey;
+    font-size: 18px;
+}
+
+
+.choice{
+    font-weight: 400;
 }
