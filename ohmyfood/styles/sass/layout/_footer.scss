@@ -1,16 +1,27 @@
-.container_footer{
+/*/////Pied de page/////*/
+.footer{
     background-color: $color-9;
-    padding: 20px 20px 25px 20px;
-    .title_logo{
-        color: $color-6;
-        font-family: 'Shrikhand', sans-serif;
-    }
-    .list_footer{
-        line-height: 1.6;
-    }
-    .list_details > a{
-        color: $color-6;
+    .container_footer{
+    
+        padding: 20px 20px 25px 20px;
+        .title_logo{
+            color: $color-6;
+            font-family: 'Shrikhand', sans-serif;
+        }
+        .list_footer{
+            line-height: 1.6;
+        }
+        .list_details > a{
+            color: $color-6;
+        }
     }
 }
 
 
+
+@media screen and (min-width: 1024px) {
+    .container_footer{
+        max-width: 1300px;
+        margin: auto;
+    }    
+}

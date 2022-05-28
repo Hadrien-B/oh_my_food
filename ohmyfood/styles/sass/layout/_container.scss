@@ -1,5 +1,5 @@
 /*///////Restaurants///////*/
-.container_restaurant{
+#container_restaurant{
     background-color: $color-5;
     padding: 40px 0 40px 0;
 }
@@ -67,4 +67,15 @@
 
 .name__restaurant > h3,p{
     margin: 3px 0 0 0;
+}
+
+@media screen and (min-width: 1024px){
+    .container_restaurant{
+        max-width: 1300px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .restaurant{
+        display: flex;
+    }
 }

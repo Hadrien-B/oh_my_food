@@ -51,7 +51,6 @@ input {
 .container {
     margin-bottom: 60px;
     margin-top: 50px;
-    max-width: 1300px;
 }
 
 .process__list {
@@ -72,29 +71,32 @@ input {
     .process{
         display: flex;
     }
-}
-ol {
-    counter-reset: liste;
-}
-
-.process>li {
-    counter-increment: liste;
-
-    &::before {
-        content: counter(liste);
-        color: $color-6;
-        background-color: $color-primary;
-        height: 30px;
-        width: 30px;
-        border: none;
-        position: absolute;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        border-radius: 50%;
-        left: 20px;
+    .process__list{
+        flex: 1;
+        margin: 10px 10px 10px 10px;
+    }
+    .container{
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 1300px;
     }
 }
+
+
+.number{
+    color: $color-6;
+    background-color: $color-primary;
+    height: 30px;
+    width: 30px;
+    border: none;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    left: 20px;
+    }
+
 
 .process--fas {
     padding: 0 14px;
