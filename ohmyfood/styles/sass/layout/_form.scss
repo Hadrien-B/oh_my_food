@@ -1,27 +1,29 @@
 /*/////Locaslisation///////*/
 
-.location{
+.location {
     display: flex;
     justify-content: center;
     background-color: $color-4;
     padding: 15px 0 15px 0;
-    &__searchInput{
+
+    &__searchInput {
         background-color: $color-4;
         border: none;
         font-size: 18px;
     }
 }
 
-.fa-location-dot{
+.fa-location-dot {
     margin-right: 10px;
     margin-left: 50px;
     font-size: 18px;
 }
 
-input{
+input {
     border: none;
     outline: none;
-    &::placeholder{
+
+    &::placeholder {
         color: black;
         font-weight: 400;
     }
@@ -33,11 +35,12 @@ input{
 
 /*//////Description/////*/
 
-.description{
+.description {
     background-color: $color-5;
     text-align: center;
     padding: 20px 8px 50px 8px;
-    &__details{
+
+    &__details {
         font-weight: 200;
         padding: 1px 0 30px 0;
     }
@@ -45,30 +48,39 @@ input{
 
 /*//////Fonctionnement//////*/
 
-.container{
-    margin-bottom: 150px;
+.container {
+    margin-bottom: 60px;
     margin-top: 50px;
+    max-width: 1300px;
 }
 
-.process__list{
+.process__list {
     background-color: $color-5;
     padding: 30px 20px;
     @include button-shadow;
     border-radius: 18px;
     margin: 25px 25px 25px 40px;
-    &:hover{
-    @include button-shadow-hover;
-    background-color: $color-7;
+    &:hover {
+        @include button-shadow-hover;
+        background-color: $color-7;
+        .process--fas {
+            color: $color-primary;
+        }
     }
 }
-
+@media screen and (min-width: 1024px){
+    .process{
+        display: flex;
+    }
+}
 ol {
     counter-reset: liste;
 }
 
-.process > li{
+.process>li {
     counter-increment: liste;
-    &::before{
+
+    &::before {
         content: counter(liste);
         color: $color-6;
         background-color: $color-primary;
@@ -84,13 +96,13 @@ ol {
     }
 }
 
-.fa-list-ul, .fa-solid{
+.process--fas {
     padding: 0 14px;
     color: grey;
     font-size: 18px;
 }
 
 
-.choice{
+.choice {
     font-weight: 400;
 }

@@ -51,8 +51,13 @@
     justify-content: center;
     font-size: 30px;
     &:hover{
-        background: linear-gradient(to bottom right, $color-secondary, $color-primary);
+        display: none;
     }
+}
+.purple-heart{
+    font-size: 30px;
+    display: none;
+    color: $color-primary
 }
 
 
