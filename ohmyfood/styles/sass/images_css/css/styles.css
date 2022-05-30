@@ -50,6 +50,17 @@ a:focus {
   text-decoration: none;
 }
 
+.menu__title {
+  font-family: "Shrikhand", sans-serif;
+  font-size: 30px;
+}
+
+.menu__dish {
+  font-size: 23px;
+  text-transform: uppercase;
+  font-weight: 300;
+}
+
 .button {
   color: #fff;
   background: linear-gradient(to bottom right, #ff79da, #9356dc);
@@ -219,6 +230,7 @@ input::placeholder {
   align-items: center;
   justify-content: center;
   font-size: 30px;
+  cursor: pointer;
 }
 .fa-heart:hover {
   display: none;
@@ -259,6 +271,60 @@ input::placeholder {
 .header__logo img {
   width: 166px;
   height: 30px;
+}
+
+/*///////Header menu/////*/
+.button__return {
+  font-size: 25px;
+  position: absolute;
+}
+
+/*//////Image menu///////*/
+.menu__img {
+  display: flex;
+  margin: 0;
+  max-width: 100%;
+  max-height: 1000px;
+  object-fit: cover;
+}
+
+/*//////Menu///////*/
+.menu {
+  position: relative;
+  z-index: 1;
+  background-color: #f7f5f5;
+  margin-top: -80px;
+  border-radius: 45px 45px 0 0;
+  padding-top: 20px;
+}
+.menu .container__title {
+  display: flex;
+  align-items: center;
+}
+.menu .container__title .title__heart {
+  padding-left: 40px;
+}
+.menu .dish {
+  background-color: #fff;
+  padding: 30px 20px;
+  box-shadow: 2px 3px rgba(171, 167, 167, 0.12), 0 10px 20px rgba(0, 0, 0, 0.24);
+  border-radius: 18px;
+  margin: 25px 15px 25px 15px;
+}
+.menu .dish:hover {
+  transition-duration: 0.25s;
+  box-shadow: 0 20px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+  cursor: pointer;
+}
+
+.menu__dish, .menu__title {
+  margin-left: 25px;
+}
+
+.menu__dish {
+  border-bottom: 4px solid #99e2d0;
+  width: 58px;
+  padding-bottom: 8px;
 }
 
 /*/////Pied de page/////*/
