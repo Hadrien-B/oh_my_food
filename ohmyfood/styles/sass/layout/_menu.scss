@@ -6,10 +6,9 @@
 
 /*//////Image menu///////*/
 .menu__img {
-    display: flex;
     margin: 0;
-    max-width: 100%;
-    max-height: 1000px;
+    max-height: 600px;
+    width: 100%;
     object-fit: cover;
 }
 
@@ -21,6 +20,13 @@
     margin-top: -80px;
     border-radius: 45px 45px 0 0;
     padding-top: 20px;
+    max-width: 1350px;
+    margin-left: auto;
+    margin-right: auto;
+
+    .menu__details{
+        margin-bottom: 55px;
+    }
 
     .container__title {
         display: flex;
@@ -32,7 +38,7 @@
 
     .dish {
         background-color: $color-6;
-        padding: 30px 20px;
+        padding: 10px 20px;
         @include button-shadow;
         border-radius: 18px;
         margin: 25px 15px 25px 15px;
@@ -51,4 +57,37 @@
     border-bottom: 4px solid $color-tertiary;
     width: 58px;
     padding-bottom: 8px;
+}
+
+.dish__name{
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 1.5;
+}
+
+.dish__details{
+    display: flex;
+    justify-content: space-between;
+}
+
+
+
+.container__button{
+    text-align: center;
+    padding: 10px 0 70px 0;
+}
+.order__button{
+    text-align: center;
+    padding: 18px 55px;
+}
+
+
+@media screen and (min-width: 1300px){
+    .container__menu{
+        display: flex;
+        justify-content: space-between;
+    }
+    .menu__details{
+        width: 420px;
+    }
 }
