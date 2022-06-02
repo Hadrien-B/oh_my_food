@@ -12,3 +12,11 @@
     cursor: pointer;
 }
 
+@mixin heart-hover {
+    cursor: pointer;
+    background: linear-gradient(to bottom left, $color-secondary, $color-primary);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: bold;    
+}
