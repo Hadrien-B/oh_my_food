@@ -45,36 +45,47 @@
 
         &:hover {
             @include button-shadow-hover;
-            &:hover &.fa-circle-check{
-                transform: rotate(0);
-            }
+        }
+        &:hover .dish__check{
+            transform: rotate(0);
+        }
+        &:hover .dish__confirmation{
+            opacity: 100%;
+            width: 70px;
+        }
+        &__price{
+            display: flex;
+            align-items: flex-end;
         }
     }
 }
 
 
 .dish__confirmation{
-    margin: -2.6rem -5.3rem -0.8rem 10rem;
-    width: 4rem;
+    opacity: 0;
+    margin: -2.7rem -1.3rem -0.63rem 0;
+    width: 0;
+    height: auto;
     display:flex;
     align-items:center;
     justify-content:center;
-    transition-duration: 0.5s;
     background-color: $color-tertiary;
     border-radius: 0 18px 18px 0;
     transition-duration: 500ms;
 }
 
-.fa-circle-check {
-    height: 1.6rem;
-    width: 1.6rem;
+.dish__check {
+    height: 26px;
+    width: 26px;
+    font-size: 20px;
+    color: $color-tertiary;
     background-color: white;
     display:flex;
     align-items:center;
     justify-content:center;
     border-radius: 100px;
     transform: rotate(180deg);
-    transition-duration: 0.5s;
+    transition-duration: 0.4s;
   }
 .menu__dish, .menu__title{
     margin-left: 25px;
@@ -94,6 +105,7 @@
 
 .dish__details{
     display: flex;
+    text-overflow: ellipsis;
     justify-content: space-between;
 }
 
