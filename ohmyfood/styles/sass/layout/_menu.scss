@@ -61,32 +61,7 @@
 }
 
 
-.dish__confirmation{
-    opacity: 0;
-    margin: -2.7rem -1.3rem -0.63rem 0;
-    width: 0;
-    height: auto;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    background-color: $color-tertiary;
-    border-radius: 0 18px 18px 0;
-    transition-duration: 500ms;
-}
 
-.dish__check {
-    height: 26px;
-    width: 26px;
-    font-size: 20px;
-    color: $color-tertiary;
-    background-color: white;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    border-radius: 100px;
-    transform: rotate(180deg);
-    transition-duration: 0.4s;
-  }
 .menu__dish, .menu__title{
     margin-left: 25px;
 }
