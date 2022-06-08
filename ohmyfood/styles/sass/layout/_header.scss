@@ -1,32 +1,3 @@
-/*//////Loader//////*/
-
-.load{
-    width: 3vh*10;
-    height: 3vh*7.5;
-    display: flex;
-    justify-content: space-evenly;
-    &__bar{
-        background-color: $color-tertiary;
-        height: 100%;
-        width: 800px;
-        animation: bars $anim-dur;
-        @for $i from 1 to $num-bars {
-            &--#{$i} {
-                animation-delay: $anim-delay * $i;
-            }
-            
-        }
-    }
-}
-
-@keyframes bars{
-    0%{
-        transform: scaleY(0.5);
-    }
-    100%{
-        transform: scaleY(1.0);
-    }
-}
 
 
 /*////////en-tête//////*/
