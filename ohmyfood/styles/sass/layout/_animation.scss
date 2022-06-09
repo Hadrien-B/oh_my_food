@@ -1,20 +1,19 @@
 /*//////Loader//////*/
 
 .loader{
-    background-color: $color-5;
-    position: fixed;
+    background: $color-5;
+    position: absolute;
     top: 50%;
     left: 40%;
     margin: 10%;
     transform: translate3d(-50%, -50%, 0);
     z-index: 10000;
-    animation: loader 1s 3s forwards;
+    animation: loader 3.3s forwards;
 }
 .dot{
     width: 24px;
     height: 24px;
     border-radius: 100%;
-    background: #3ac;
     display: inline-block;
     animation: slide  1s infinite;
 }
@@ -63,12 +62,45 @@
     }
 }
 
+@keyframes main{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+.accueil{
+    animation: main 2.5s forwards cubic-bezier(1, -0.25, 0.91, 0.61);
+}
 
 /*//////Animation menu//////*/
 
+.container__dish{
+    animation: gradual 1s forwards;
+    opacity: 0;
+    @for $i from 1 through 5 {
+        &:nth-child(#{$i}) {
+          animation-delay: calc(#{$i}s / 5);
+        }
+    }
+}
+
+@keyframes gradual {
+    from{
+        transform: translateY(20px);
+        opacity: 0%;
+    }
+    to{
+        transform: translateY(0px);
+        opacity: 100%;
+    }
+}
+
 .dish__confirmation{
     opacity: 0;
-    margin: -2.7rem -1.3rem -0.63rem 0;
+    margin: -0.68rem -1.5rem -0.68rem 1rem;
     width: 0;
     height: auto;
     display:flex;
