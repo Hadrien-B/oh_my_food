@@ -24,19 +24,23 @@
     margin-left: auto;
     margin-right: auto;
 
-    .menu__details{
+    .menu__details {
         margin-bottom: 55px;
     }
 
     .container__title {
         display: flex;
         align-items: center;
-        .title__heart{
-            padding-left: 40px;
+        justify-content: space-between;
+
+        .title__heart {
+            padding-right: 30px;
         }
     }
 
-    .dish {
+    .container__dish {
+        max-width: 1000px;
+        display: flex;
         background-color: $color-6;
         padding: 10px 20px;
         @include button-shadow;
@@ -46,14 +50,25 @@
         &:hover {
             @include button-shadow-hover;
         }
-        &:hover .dish__check{
+
+        &:hover .dish__check {
             transform: rotate(0);
         }
-        &:hover .dish__confirmation{
+
+        &:hover .dish__confirmation {
             opacity: 100%;
             width: 70px;
         }
-        &__price{
+    }
+
+    .dish {
+        flex: 1;
+        display: flex;
+        justify-content: space-between;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+
+        &__price {
             display: flex;
             align-items: flex-end;
         }
@@ -62,47 +77,54 @@
 
 
 
-.menu__dish, .menu__title{
+.menu__dish,
+.menu__title {
     margin-left: 25px;
 }
 
-.menu__dish{
+.menu__dish {
     border-bottom: 4px solid $color-tertiary;
     width: 58px;
     padding-bottom: 8px;
 }
 
-.dish__name{
+.dish__name {
     font-weight: 400;
     font-size: 20px;
     line-height: 1.5;
-}
-
-.dish__details{
-    display: flex;
+    white-space: nowrap;
     text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+.dish__details {
     justify-content: space-between;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
 }
 
 
 
 
-.container__button{
+.container__button {
     text-align: center;
     padding: 10px 0 70px 0;
 }
-.order__button{
+
+.order__button {
     text-align: center;
     padding: 18px 55px;
 }
 
 
-@media screen and (min-width: 1300px){
-    .container__menu{
+@media screen and (min-width: 1300px) {
+    .container__menu {
         display: flex;
         justify-content: space-between;
     }
-    .menu__details{
+
+    .menu__details {
         width: 420px;
     }
 }
