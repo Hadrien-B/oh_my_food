@@ -1,21 +1,20 @@
 @charset "UTF-8";
 /*//////Loader//////*/
 .loader {
-  background-color: #f7f5f5;
-  position: fixed;
+  background: #f7f5f5;
+  position: absolute;
   top: 50%;
   left: 40%;
   margin: 10%;
   transform: translate3d(-50%, -50%, 0);
   z-index: 10000;
-  animation: loader 1s 3s forwards;
+  animation: loader 3.3s forwards;
 }
 
 .dot {
   width: 24px;
   height: 24px;
   border-radius: 100%;
-  background: #3ac;
   display: inline-block;
   animation: slide 1s infinite;
 }
@@ -65,10 +64,52 @@
     visibility: hidden;
   }
 }
+@keyframes main {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.accueil {
+  animation: main 2.5s forwards cubic-bezier(1, -0.25, 0.91, 0.61);
+}
+
 /*//////Animation menu//////*/
+.container__dish {
+  animation: gradual 1s forwards;
+  opacity: 0;
+}
+.container__dish:nth-child(1) {
+  animation-delay: calc(1s / 5);
+}
+.container__dish:nth-child(2) {
+  animation-delay: calc(2s / 5);
+}
+.container__dish:nth-child(3) {
+  animation-delay: calc(3s / 5);
+}
+.container__dish:nth-child(4) {
+  animation-delay: calc(4s / 5);
+}
+.container__dish:nth-child(5) {
+  animation-delay: calc(5s / 5);
+}
+
+@keyframes gradual {
+  from {
+    transform: translateY(20px);
+    opacity: 0%;
+  }
+  to {
+    transform: translateY(0px);
+    opacity: 100%;
+  }
+}
 .dish__confirmation {
   opacity: 0;
-  margin: -2.7rem -1.3rem -0.63rem 0;
+  margin: -0.68rem -1.5rem -0.68rem 1rem;
   width: 0;
   height: auto;
   display: flex;
@@ -171,6 +212,7 @@ a:focus {
   transition-duration: 0.25s;
   box-shadow: 0 20px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
   cursor: pointer;
+  filter: brightness(1.1);
 }
 
 /*/////Localisation///////*/
@@ -411,35 +453,46 @@ input::placeholder {
 .menu .container__title {
   display: flex;
   align-items: center;
+  justify-content: space-between;
 }
 .menu .container__title .title__heart {
-  padding-left: 40px;
+  padding-right: 30px;
 }
-.menu .dish {
+.menu .container__dish {
+  max-width: 1000px;
+  display: flex;
   background-color: #fff;
   padding: 10px 20px;
   box-shadow: 2px 3px rgba(171, 167, 167, 0.12), 0 10px 20px rgba(0, 0, 0, 0.24);
   border-radius: 18px;
   margin: 25px 15px 25px 15px;
 }
-.menu .dish:hover {
+.menu .container__dish:hover {
   transition-duration: 0.25s;
   box-shadow: 0 20px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
   cursor: pointer;
 }
-.menu .dish:hover .dish__check {
+.menu .container__dish:hover .dish__check {
   transform: rotate(0);
 }
-.menu .dish:hover .dish__confirmation {
+.menu .container__dish:hover .dish__confirmation {
   opacity: 100%;
   width: 70px;
+}
+.menu .dish {
+  flex: 1;
+  display: flex;
+  justify-content: space-between;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
 .menu .dish__price {
   display: flex;
   align-items: flex-end;
 }
 
-.menu__dish, .menu__title {
+.menu__dish,
+.menu__title {
   margin-left: 25px;
 }
 
@@ -453,12 +506,16 @@ input::placeholder {
   font-weight: 400;
   font-size: 20px;
   line-height: 1.5;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
 }
 
 .dish__details {
-  display: flex;
-  text-overflow: ellipsis;
   justify-content: space-between;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
 }
 
 .container__button {
