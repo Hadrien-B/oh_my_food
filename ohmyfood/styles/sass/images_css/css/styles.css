@@ -340,7 +340,7 @@ input::placeholder {
 .restaurant {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-evenlycd;
+  justify-content: space-evenly;
 }
 .restaurant .restaurant__card {
   flex: 1 1 350px;
@@ -368,6 +368,7 @@ input::placeholder {
   background-color: #99e2d0;
   color: #1B6150;
   padding: 8px;
+  margin: -160px 12px 120px 270px;
   border-radius: 2px;
   font-weight: 400;
   position: absolute;
@@ -408,7 +409,12 @@ input::placeholder {
 }
 @media screen and (min-width: 1139px) {
   .restaurant__card {
-    width: 539px;
+    min-width: 539px;
+  }
+}
+@media screen and (min-width: 1300px) {
+  .badge_new {
+    margin: -160px 12px 120px 530px;
   }
 }
 /*////////en-tête//////*/
@@ -513,7 +519,14 @@ input::placeholder {
 }
 
 .dish__details {
+  line-height: 1.6rem;
   justify-content: space-between;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.dish__more {
   white-space: nowrap;
   text-overflow: ellipsis;
   overflow: hidden;
