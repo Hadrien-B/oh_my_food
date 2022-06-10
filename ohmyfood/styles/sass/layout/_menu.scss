@@ -97,7 +97,14 @@
 }
 
 .dish__details {
+    line-height: 1.6rem;
     justify-content: space-between;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+.dish__more{
     white-space: nowrap;
     text-overflow: ellipsis;
     overflow: hidden;
