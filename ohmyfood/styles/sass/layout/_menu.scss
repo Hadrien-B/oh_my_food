@@ -66,6 +66,7 @@
         justify-content: space-between;
         white-space: nowrap;
         text-overflow: ellipsis;
+        overflow: hidden;
 
         &__price {
             display: flex;
@@ -90,7 +91,6 @@
 .dish__name {
     font-weight: 400;
     font-size: 20px;
-    line-height: 1.5;
     white-space: nowrap;
     text-overflow: ellipsis;
     overflow: hidden;
