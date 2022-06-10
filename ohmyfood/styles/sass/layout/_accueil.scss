@@ -33,6 +33,7 @@
     background-color: $color-tertiary;
     color: $color-8;
     padding: 8px;
+    margin: -160px 12px 120px 270px;
     border-radius: 2px;
     font-weight: 400;
     position: absolute;
@@ -73,6 +74,13 @@
 }
 @media screen  and (min-width: 1139px){
     .restaurant__card{
-        width: 539px;
+        min-width: 539px;
     }
+}
+
+
+@media screen and (min-width: 1300px){
+    .badge_new{
+        margin: -160px 12px 120px 530px;
+    }   
 }
