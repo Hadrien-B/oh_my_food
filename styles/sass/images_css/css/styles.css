@@ -7,7 +7,7 @@
   left: 40%;
   margin: 10%;
   transform: translate3d(-50%, -50%, 0);
-  z-index: 10000;
+  z-index: 1;
   animation: loader 4.8s forwards;
   display: flex;
   justify-content: space-between;
@@ -66,6 +66,10 @@
     visibility: hidden;
   }
 }
+.accueil {
+  animation: main 3.8s forwards cubic-bezier(1, -0.25, 0.91, 0.61);
+}
+
 @keyframes main {
   0% {
     opacity: 0;
@@ -74,10 +78,6 @@
     opacity: 1;
   }
 }
-.accueil {
-  animation: main 3.8s forwards cubic-bezier(1, -0.25, 0.91, 0.61);
-}
-
 /*//////Animation menu//////*/
 .container__dish {
   animation: gradual 1s forwards;
@@ -398,6 +398,7 @@ input::placeholder {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   font-weight: bold;
+  transition: all 300ms ease-out;
 }
 
 .name__restaurant {
