@@ -42,7 +42,7 @@
 
 
 
-@keyframes slide{
+@keyframes slide{/*Animation des points du loader*/
     0%{
         transform: scale(1);
     }
@@ -64,7 +64,7 @@
     }
 }
 
-.accueil{
+.accueil{/*Animation pour faire apparaitre la page d'accueil*/
     animation: main 3.8s forwards cubic-bezier(1, -0.25, 0.91, 0.61);
 }
 
@@ -83,7 +83,7 @@
 .container__dish{
     animation: gradual 1s forwards;
     opacity: 0;
-    @for $i from 1 through 5 {
+    @for $i from 1 through 5 {/*Apparition progressive des plats*/ 
         &:nth-child(#{$i}) {
           animation-delay: calc(#{$i}s / 5);
         }
@@ -101,7 +101,7 @@
     }
 }
 
-.dish__confirmation{
+.dish__confirmation{/*Contenant coulissant de la coche*/
     opacity: 0;
     margin: -0.62rem -1.5rem -0.63rem 1rem;
     width: 0;
@@ -114,7 +114,7 @@
     transition-duration: 500ms;
 }
 
-.dish__check {
+.dish__check {/*Coche rotative*/
     height: 26px;
     width: 26px;
     font-size: 20px;
