@@ -63,6 +63,7 @@ input {
     margin: 25px 25px 25px 40px;
     &:hover {
         @include button-shadow-hover;
+        cursor: default;
         background-color: $color-7;
         .process--fas {
             color: $color-primary;
