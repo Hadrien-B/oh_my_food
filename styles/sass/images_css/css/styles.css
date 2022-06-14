@@ -69,6 +69,7 @@ a:focus {
 .header {
   text-align: center;
   padding: 16px;
+  /*Ombre de l'en-tête*/
   box-shadow: 1px 3px rgba(171, 167, 167, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
   position: relative;
   z-index: 1;
@@ -128,11 +129,13 @@ input::placeholder {
   position: relative;
   background-color: #f7f5f5;
   padding: 25px 20px;
+  /*Ombre des boutons*/
   box-shadow: 2px 3px rgba(171, 167, 167, 0.12), 0 10px 20px rgba(0, 0, 0, 0.24);
   border-radius: 18px;
   margin: 25px 25px 25px 40px;
 }
 .process__list:hover {
+  /*Ombre accentuée des boutons et des cartes de restaurant*/
   transition-duration: 0.25s;
   box-shadow: 0 20px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
   cursor: pointer;
@@ -216,9 +219,11 @@ input::placeholder {
   background-color: #fff;
   border-radius: 15px;
   position: relative;
+  /*Ombre des boutons*/
   box-shadow: 2px 3px rgba(171, 167, 167, 0.12), 0 10px 20px rgba(0, 0, 0, 0.24);
 }
 .restaurant .restaurant__card:hover {
+  /*Ombre accentuée des boutons et des cartes de restaurant*/
   transition-duration: 0.25s;
   box-shadow: 0 20px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
   cursor: pointer;
@@ -256,7 +261,6 @@ input::placeholder {
 .fa-heart:hover {
   cursor: pointer;
   background: linear-gradient(to bottom left, #ff79da, #9356dc);
-  background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   font-weight: bold;
@@ -331,6 +335,7 @@ input::placeholder {
 }
 
 @keyframes slide {
+  /*Animation des points du loader*/
   0% {
     transform: scale(1);
   }
@@ -351,6 +356,7 @@ input::placeholder {
   }
 }
 .accueil {
+  /*Animation pour faire apparaitre la page d'accueil*/
   animation: main 3.8s forwards cubic-bezier(1, -0.25, 0.91, 0.61);
 }
 
@@ -366,6 +372,11 @@ input::placeholder {
 .container__dish {
   animation: gradual 1s forwards;
   opacity: 0;
+  /*Apparition progressive des plats*/
+  /*Apparition progressive des plats*/
+  /*Apparition progressive des plats*/
+  /*Apparition progressive des plats*/
+  /*Apparition progressive des plats*/
 }
 .container__dish:nth-child(1) {
   animation-delay: calc(1s / 5);
@@ -394,6 +405,7 @@ input::placeholder {
   }
 }
 .dish__confirmation {
+  /*Contenant coulissant de la coche*/
   opacity: 0;
   margin: -0.62rem -1.5rem -0.63rem 1rem;
   width: 0;
@@ -407,6 +419,7 @@ input::placeholder {
 }
 
 .dish__check {
+  /*Coche rotative*/
   height: 26px;
   width: 26px;
   font-size: 20px;
@@ -426,9 +439,11 @@ input::placeholder {
   border-radius: 30px;
   border: none;
   padding: 13px 25px;
+  /*Ombre des boutons*/
   box-shadow: 2px 3px rgba(171, 167, 167, 0.12), 0 10px 20px rgba(0, 0, 0, 0.24);
 }
 .button:hover {
+  /*Ombre accentuée des boutons et des cartes de restaurant*/
   transition-duration: 0.25s;
   box-shadow: 0 20px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
   cursor: pointer;
@@ -476,11 +491,13 @@ input::placeholder {
   display: flex;
   background-color: #fff;
   padding: 10px 20px;
+  /*Ombre des boutons*/
   box-shadow: 2px 3px rgba(171, 167, 167, 0.12), 0 10px 20px rgba(0, 0, 0, 0.24);
   border-radius: 18px;
   margin: 25px 15px 25px 15px;
 }
 .menu .container__dish:hover {
+  /*Ombre accentuée des boutons et des cartes de restaurant*/
   transition-duration: 0.25s;
   box-shadow: 0 20px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
   cursor: pointer;
