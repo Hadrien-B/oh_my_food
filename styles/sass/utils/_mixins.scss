@@ -15,6 +15,7 @@
 @mixin heart-hover {
     cursor: pointer;
     background: linear-gradient(to bottom left, $color-secondary, $color-primary);
+    -webkit-background-clip: text;
     color: transparent;
     font-weight: bold; 
     transition: all 500ms ease-in-out;
