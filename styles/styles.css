@@ -259,6 +259,7 @@ input::placeholder {
   font-size: 30px;
 }
 .fa-heart:hover {
+  /*Animation du coeur*/
   cursor: pointer;
   background: linear-gradient(to bottom left, #ff79da, #9356dc);
   -webkit-background-clip: text;
