@@ -261,6 +261,7 @@ input::placeholder {
 .fa-heart:hover {
   cursor: pointer;
   background: linear-gradient(to bottom left, #ff79da, #9356dc);
+  -webkit-background-clip: text;
   color: transparent;
   font-weight: bold;
   transition: all 500ms ease-in-out;
