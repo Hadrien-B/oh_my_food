@@ -6,7 +6,7 @@
     padding: 16px;
     @include header-shadow;
     position: relative;
-    z-index: 1;
+    z-index: 1;/*Important pour conserver l'ombre*/
     &__logo img{
         width: 166px;
         height: 30px;
