@@ -1,0 +1,129 @@
+/*//////Loader//////*/
+
+.loader{
+    background: $color-5;
+    position: absolute;
+    top: 50%;
+    left: 40%;
+    margin: 10%;
+    transform: translate3d(-50%, -50%, 0);
+    z-index: 1;
+    animation: loader 4.8s forwards;
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+}
+.dot{
+    width: 24px;
+    height: 24px;
+    border-radius: 100%;
+    animation: slide  1s infinite;
+}
+.dot:nth-child(1){
+    animation-delay: 0.1s;
+    background: $color-primary;
+}
+.dot:nth-child(2){
+    animation-delay: 0.2s;
+    background: $color-secondary;
+}
+.dot:nth-child(3){
+    animation-delay: 0.3s;
+    background: $color-tertiary;
+}
+.dot:nth-child(4){
+    animation-delay: 0.4s;
+    background: $color-8;
+}
+.dot:nth-child(5){
+    animation-delay: 0.5s;
+    background: $color-9;
+}
+
+
+
+@keyframes slide{/*Animation des points du loader*/
+    0%{
+        transform: scale(1);
+    }
+    50%{
+        transform: scale(2);
+    }
+    100%{
+        transform: scale(1);
+    }
+}
+
+@keyframes loader{/*Animation globale du loader*/
+    from{
+    opacity: 100%;
+    }
+    to{
+        opacity: 0%;
+        visibility: hidden;
+    }
+}
+
+.accueil{/*Animation pour faire apparaitre la page d'accueil*/
+    animation: main 3.8s forwards cubic-bezier(1, -0.25, 0.91, 0.61);
+}
+
+@keyframes main{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+
+/*//////Animation menu//////*/
+
+.container__dish{
+    animation: gradual 1s forwards;
+    opacity: 0;
+    @for $i from 1 through 5 {/*Boucle pour l'apparition progressive des plats*/ 
+        &:nth-child(#{$i}) {
+          animation-delay: calc(#{$i}s / 5);
+        }
+    }
+}
+
+@keyframes gradual {/*Apparition progressive des plats*/
+    from{
+        transform: translateY(20px);
+        opacity: 0%;
+    }
+    to{
+        transform: translateY(0px);
+        opacity: 100%;
+    }
+}
+
+.dish__confirmation{/*Contenant coulissant de la coche*/
+    opacity: 0;
+    margin: -0.62rem -1.5rem -0.63rem 1rem;
+    width: 0;
+    height: auto;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    background-color: $color-tertiary;
+    border-radius: 0 18px 18px 0;
+    transition-duration: 500ms;
+}
+
+.dish__check {/*Coche rotative*/
+    height: 26px;
+    width: 26px;
+    font-size: 20px;
+    color: $color-tertiary;
+    background-color: white;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    border-radius: 100px;
+    transform: rotate(180deg);
+    transition-duration: 700ms;
+  }
