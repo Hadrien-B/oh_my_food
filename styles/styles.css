@@ -73,6 +73,7 @@ a:focus {
   box-shadow: 1px 3px rgba(171, 167, 167, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
   position: relative;
   z-index: 1;
+  /*Important pour conserver l'ombre*/
 }
 .header__logo img {
   width: 166px;
@@ -219,6 +220,7 @@ input::placeholder {
   background-color: #fff;
   border-radius: 15px;
   position: relative;
+  /*Important pour positionner "nouveau"*/
   /*Ombre des boutons*/
   box-shadow: 2px 3px rgba(171, 167, 167, 0.12), 0 10px 20px rgba(0, 0, 0, 0.24);
 }
@@ -348,6 +350,7 @@ input::placeholder {
   }
 }
 @keyframes loader {
+  /*Animation globale du loader*/
   from {
     opacity: 100%;
   }
@@ -373,11 +376,11 @@ input::placeholder {
 .container__dish {
   animation: gradual 1s forwards;
   opacity: 0;
-  /*Apparition progressive des plats*/
-  /*Apparition progressive des plats*/
-  /*Apparition progressive des plats*/
-  /*Apparition progressive des plats*/
-  /*Apparition progressive des plats*/
+  /*Boucle pour l'apparition progressive des plats*/
+  /*Boucle pour l'apparition progressive des plats*/
+  /*Boucle pour l'apparition progressive des plats*/
+  /*Boucle pour l'apparition progressive des plats*/
+  /*Boucle pour l'apparition progressive des plats*/
 }
 .container__dish:nth-child(1) {
   animation-delay: calc(1s / 5);
@@ -396,6 +399,7 @@ input::placeholder {
 }
 
 @keyframes gradual {
+  /*Apparition progressive des plats*/
   from {
     transform: translateY(20px);
     opacity: 0%;
@@ -437,6 +441,7 @@ input::placeholder {
 .button {
   color: #fff;
   background: linear-gradient(to bottom right, #ff79da, #9356dc);
+  /*Dégradé de couleur*/
   border-radius: 30px;
   border: none;
   padding: 13px 25px;
@@ -449,6 +454,7 @@ input::placeholder {
   box-shadow: 0 20px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
   cursor: pointer;
   filter: brightness(1.1);
+  /*Eclaircissement du background*/
 }
 
 /*///////Header menu/////*/
